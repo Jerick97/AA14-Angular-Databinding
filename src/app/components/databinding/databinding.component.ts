@@ -15,7 +15,7 @@ export class DatabindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  //Si se pulsa en el botón, actualiza la variable show y muestra o oculta el Div
   isShow(){
     if(this.show){
       this.Ocultar = "Hide"

@@ -1,31 +1,35 @@
-<div>
-    <h1 class="text-3xl font-medium p-4">Data Binding Interpolation</h1>
+<div class="bg-gray-900 p-5 shadow-2xl my-2">
+    <h1 class="text-3xl font-bold p-4 text-white">Data Binding Interpolation</h1>
     <hr class="my-4 border-gray-400">
-  
-    <p class="text-lg font-medium p-4">{{title}}</p>
-    <button (click)="isShow()" class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-2 px-4 rounded">{{Ocultar}}</button> 
-  
-    <div [hidden]="show" class="mt-4 p-4 bg-gray-100">
-      Event Binding, es el mecanismo de data binding mediante el cual trabaja con los eventos que se encuentran en el DOM
+    <!--Mostrar y Ocultar Texto-->
+    <div class="bg-blue-500 p-5">
+        <p class="text-lg py-4 font-bold text-white">{{title}}</p>
+        <button (click)="isShow()" [ngClass]="show ? 'bg-indigo-700 hover:bg-indigo-500' : 'bg-red-700 hover:bg-red-500'" class="text-white font-medium py-2 px-4 rounded">{{Ocultar}}</button> 
+    
+        <div [hidden]="show" class="mt-4 p-4 bg-gray-100">
+        Event Binding, es el mecanismo de data binding mediante el cual trabaja con los eventos que se encuentran en el DOM
+        </div>
     </div>
     <hr class="my-4 border-gray-400">
   
     <div>
-      <p class="text-lg font-medium p-4">{{subtitle}}</p>
-      <div>
-        <p class="p-4 font-medium">{{texto}}</p>
-      </div>
-      <hr class="my-4 border-gray-400">
-      <div>
-          <div class="flex justify-center mt-4">
-              <div class="mb-4 xl:w-96">
-                <textarea [(ngModel)] = "texto" class="form-input w-full p-3 font-medium text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-600 focus:outline-none"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  placeholder="Tu Mensaje"
-                ></textarea>
-              </div>
+        <div class="bg-blue-500 p-5">
+            <p class="text-lg py-4 font-bold text-white">{{subtitle}}</p>
+            <div [ngClass]="texto == undefined || texto == '' ? '' : 'bg-gray-100'">
+                <p class="p-4 font-medium text-black">{{texto}}</p>
             </div>
-      </div>
+        </div>
+        <hr class="my-4 border-gray-400">
+        <div class="bg-blue-500 mt-2">
+            <div class="flex justify-center mt-4">
+                <div class="mb-4 xl:w-96 mt-3">
+                    <textarea [(ngModel)] = "texto" class="form-input w-full p-3 font-medium text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-600 focus:outline-none"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                    placeholder="Tu Mensaje"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
     </div>
   </div>  

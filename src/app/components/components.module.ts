@@ -4,6 +4,7 @@ import { HijoComponent } from './hijo/hijo.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports:[
     HijoComponent,
