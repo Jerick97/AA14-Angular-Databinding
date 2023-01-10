@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HijoComponent } from './hijo/hijo.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 
 
 @NgModule({
   declarations: [
     HijoComponent,
-    HeaderComponent
+    HeaderComponent,
+    DatabindingComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { FormsModule } from '@angular/forms';
   ],
   exports:[
     HijoComponent,
-    HeaderComponent
+    HeaderComponent,
+    DatabindingComponent
   ]
 })
 export class ComponentsModule { }
